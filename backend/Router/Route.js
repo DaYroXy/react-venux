@@ -6,7 +6,7 @@ router.get("/", (req, res) => {
     res.send("hi")
 })
 
-router.get("/api/users", (req, res) => {
+router.get("/users", (req, res) => {
     const data = [
         { username: "Anas", password: "123" },
         { username: "karim", password: "123" },

@@ -1,6 +1,7 @@
 const express = require('express')
 const cors = require("cors")
 const app = express()
+const serverless = require('serverless-http');
 const PORT = process.env.PORT || 5500
 
 require("dotenv").config();
@@ -25,6 +26,4 @@ mongoose.connect(process.env.MONGO_CONNECTION, { useNewUrlParser: true })
 
 app.use('/', route)
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`)
-})
+module.exports.handler = serverless(app);

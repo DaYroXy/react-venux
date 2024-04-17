@@ -1,0 +1,4 @@
+[[redirects]]
+from = "/api/*"
+to = "/.netlify/functions/lambda/:splat"
+status = 200
